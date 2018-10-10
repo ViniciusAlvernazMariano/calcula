@@ -49,7 +49,10 @@ public class CalculadoraController implements Initializable {
         Double resultado= N1 + N2;
         txtResult.setText(resultado.toString());
         
-        n1 =
+        n1 = txt1.getText();
+        n2 = txt2.getText();
+        nR = txtResult.getText();
+        op = "+";
     }
     @FXML
     private void Subtracao(ActionEvent event) {
@@ -57,6 +60,11 @@ public class CalculadoraController implements Initializable {
         Double N2 = Double.parseDouble(txt2.getText());
         Double resultado= N1 - N2;
         txtResult.setText(resultado.toString());
+        
+        n1 = txt1.getText();
+        n2 = txt2.getText();
+        nR = txtResult.getText();
+        op = "-";
     }
     
     @FXML
@@ -65,6 +73,11 @@ public class CalculadoraController implements Initializable {
         Double N2 = Double.parseDouble(txt2.getText());
         Double resultado= N1 * N2;
         txtResult.setText(resultado.toString());
+        
+        n1 = txt1.getText();
+        n2 = txt2.getText();
+        nR = txtResult.getText();
+        op = "*";
     }
     @FXML
     private void Divisao(ActionEvent event) {
@@ -72,6 +85,11 @@ public class CalculadoraController implements Initializable {
         Double N2 = Double.parseDouble(txt2.getText());
         Double resultado= N1 / N2;
         txtResult.setText(resultado.toString());
+        
+        n1 = txt1.getText();
+        n2 = txt2.getText();
+        nR = txtResult.getText();
+        op = "/";
     }
     
     @Override
