@@ -24,5 +24,6 @@
             <Button fx:id="btnHistorico" layoutX="35.0" layoutY="198.0" mnemonicParsing="false" onAction="#Historico" text="Historico" />
          </children>
       </Pane>
+      <Button fx:id="btnFechar" layoutX="420.0" layoutY="-1.0" mnemonicParsing="false" onAction="#Fechar" prefHeight="11.0" prefWidth="28.0" text="X" />
     </children>
 </AnchorPane>

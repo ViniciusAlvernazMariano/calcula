@@ -44,6 +44,8 @@ public class CalculadoraController implements Initializable {
     private Button btnLimpar;
     @FXML
     private Button btnHistorico;
+    @FXML
+    private Button btnFechar;
     
     @FXML
     private void Adicao(ActionEvent event) {
@@ -130,7 +132,7 @@ public class CalculadoraController implements Initializable {
 }
     
     public void Salvar(){
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("Historico");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("calculadora");
         EntityManager em = emf.createEntityManager();
         
         Historico his = new Historico();
@@ -145,6 +147,12 @@ public class CalculadoraController implements Initializable {
         em.persist(his);
         
         em.getTransaction().commit();
+    }
+
+    @FXML
+    private void Fechar(ActionEvent event) {
+        Stage stage = (Stage) btnFechar.getScene().getWindow();
+        stage.close();
     }
         
 }

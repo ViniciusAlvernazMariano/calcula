@@ -6,13 +6,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="201.0" prefWidth="381.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.LoginController">
    <children>
-      <Button fx:id="btnFechar" layoutX="339.0" layoutY="287.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="88.0" text="Fechar" />
-      <Button fx:id="btnconfirmar" layoutX="235.0" layoutY="287.0" mnemonicParsing="false" onAction="#Entrar" prefHeight="32.0" prefWidth="78.0" text="Confirmar" />
-      <PasswordField fx:id="txtpass" layoutX="221.0" layoutY="235.0" prefHeight="32.0" prefWidth="206.0" />
-      <TextField fx:id="txtUsu" layoutX="221.0" layoutY="188.0" prefHeight="25.0" prefWidth="206.0" />
-      <Label layoutX="161.0" layoutY="191.0" text="Usuário" />
-      <Label layoutX="161.0" layoutY="243.0" text="Senha" />
+      <Button fx:id="btnFechar" layoutX="235.0" layoutY="148.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="88.0" text="Fechar" />
+      <Button fx:id="btnconfirmar" layoutX="131.0" layoutY="148.0" mnemonicParsing="false" onAction="#Entrar" prefHeight="32.0" prefWidth="78.0" text="Confirmar" />
+      <PasswordField fx:id="txtpass" layoutX="117.0" layoutY="96.0" prefHeight="32.0" prefWidth="206.0" />
+      <TextField fx:id="txtUsu" layoutX="117.0" layoutY="49.0" prefHeight="25.0" prefWidth="206.0" />
+      <Label layoutX="57.0" layoutY="52.0" text="Usuário" />
+      <Label layoutX="57.0" layoutY="104.0" text="Senha" />
    </children>
 </AnchorPane>

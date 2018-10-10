@@ -42,9 +42,9 @@ public class LoginController implements Initializable {
 
     @FXML
     private void Entrar() throws IOException {
-        javax.persistence.EntityManagerFactory emf = Persistence.createEntityManagerFactory("pizzaPlanet");
+        javax.persistence.EntityManagerFactory emf = Persistence.createEntityManagerFactory("calculadora");
         EntityManager em = emf.createEntityManager();
-        Query query = em.createQuery("SELECT l FROM Usuario as l WHERE l.Usuario = :usuario");        
+        Query query = em.createQuery("SELECT l FROM usuario as l WHERE l.Usuario = :usuario");        
         //Query query = em.createQuery("SELECT l FROM Login as l WHERE l.usuario = :usuario and l.senha = :senha");
         String user = txtUsu.getText();
         query.setParameter("usuario", user);
@@ -71,7 +71,6 @@ public class LoginController implements Initializable {
         em.close();
         emf.close();
     }
-  @FXML
     private void Fechar(ActionEvent event) {
        
         Stage stage = (Stage) btnFechar.getScene().getWindow();
@@ -80,7 +79,7 @@ public class LoginController implements Initializable {
     private void abrirMenuPrincipal() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("/br/edu/ifro/Calculadora.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(),600,425);
+            Scene scene = new Scene(fxmlLoader.load(),448,273);
             Stage stage = new Stage();
             stage.initStyle(StageStyle.UNDECORATED);
             stage.setTitle(" Calculadora");
