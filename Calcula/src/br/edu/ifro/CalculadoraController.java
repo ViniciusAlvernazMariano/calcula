@@ -18,6 +18,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 /**
  *
@@ -53,6 +56,8 @@ public class CalculadoraController implements Initializable {
         n2 = txt2.getText();
         nR = txtResult.getText();
         op = "+";
+        
+        Salvar();
     }
     @FXML
     private void Subtracao(ActionEvent event) {
@@ -65,6 +70,8 @@ public class CalculadoraController implements Initializable {
         n2 = txt2.getText();
         nR = txtResult.getText();
         op = "-";
+        
+        Salvar();
     }
     
     @FXML
@@ -78,6 +85,8 @@ public class CalculadoraController implements Initializable {
         n2 = txt2.getText();
         nR = txtResult.getText();
         op = "*";
+        
+        Salvar();
     }
     @FXML
     private void Divisao(ActionEvent event) {
@@ -90,6 +99,8 @@ public class CalculadoraController implements Initializable {
         n2 = txt2.getText();
         nR = txtResult.getText();
         op = "/";
+        
+        Salvar();
     }
     
     @Override
@@ -121,4 +132,24 @@ public class CalculadoraController implements Initializable {
     }
     
 }
+    
+    public void Salvar(){
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("Historico");
+        EntityManager em = emf.createEntityManager();
+        
+        Historico his = new Historico();
+                
+        his.setPrimeiroValor(n1);
+        his.setSegundoValor(n2);
+        his.setResultado(nR);
+        his.setOperador(op);
+                
+        em.getTransaction().begin();
+        
+        em.persist(his);
+        
+        em.getTransaction().commit();
+    }
+        
 }
+    

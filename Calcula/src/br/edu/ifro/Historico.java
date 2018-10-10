@@ -16,6 +16,10 @@ public class Historico {
     private String segundoValor;
     private String operador;
     private String resultado;
+    
+    public String toString() {
+        return this.primeiroValor;
+    }
 
     public Integer getId() {
         return Id;

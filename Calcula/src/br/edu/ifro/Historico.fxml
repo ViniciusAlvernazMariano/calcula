@@ -5,16 +5,38 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
 
 <AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.HistoricoController">
    <children>
-      <TableView layoutX="27.0" layoutY="51.0" prefHeight="241.0" prefWidth="413.0">
+      <TableView fx:id="tbHistorico" layoutX="27.0" layoutY="51.0" prefHeight="241.0" prefWidth="413.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="id" />
-          <TableColumn prefWidth="75.0" text="1º Valor " />
-            <TableColumn prefWidth="75.0" text="2º Valor" />
-            <TableColumn prefWidth="75.0" text="Operador" />
-            <TableColumn fx:id="tbHistorico" prefWidth="75.0" text="Resultado" />
+          <TableColumn fx:id="tbId" prefWidth="75.0" text="id">
+              <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="tbN1" prefWidth="75.0" text="1º Valor ">
+          <cellValueFactory>
+                  <PropertyValueFactory property="primeiroValor" />
+              </cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="tbN2" prefWidth="75.0" text="2º Valor">
+            <cellValueFactory>
+                  <PropertyValueFactory property="segundoValor" />
+              </cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="tbOp" prefWidth="75.0" text="Operador">
+            <cellValueFactory>
+                  <PropertyValueFactory property="operador" />
+              </cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="tbResult" prefWidth="75.0" text="Resultado">
+            <cellValueFactory>
+                  <PropertyValueFactory property="resultado" />
+              </cellValueFactory>
+          </TableColumn>
         </columns>
       </TableView>
       <Button fx:id="btnFechar" layoutX="440.0" layoutY="14.0" mnemonicParsing="false" onAction="#Fechar" text="Fechar" />
