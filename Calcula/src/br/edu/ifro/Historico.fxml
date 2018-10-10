@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.HistoricoController">
+   <children>
+      <TableView layoutX="27.0" layoutY="51.0" prefHeight="241.0" prefWidth="413.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="id" />
+          <TableColumn prefWidth="75.0" text="1º Valor " />
+            <TableColumn prefWidth="75.0" text="2º Valor" />
+            <TableColumn prefWidth="75.0" text="Operador" />
+            <TableColumn fx:id="tbHistorico" prefWidth="75.0" text="Resultado" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnFechar" layoutX="440.0" layoutY="14.0" mnemonicParsing="false" onAction="#Fechar" text="Fechar" />
+   </children>
+</AnchorPane>
